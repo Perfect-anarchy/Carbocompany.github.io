@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="icon" href="src/img/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/186787dbac.js" crossorigin="anonymous"></script>
+
+    <title>CarboCompany</title>
+
+</head>
+<body>
+    <div id="preloader"></div>
+
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="src/img/logo.svg" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="index.html#nosProduit">Nos Produit</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <H1>À propos</H1>
+    </section>
+
+    <!-- A Propos de nous -->
+    <section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>Nous Sommes partout dans le Maroc</h1>
+            <p>Dolore et veniam non minim. Sunt nulla consectetur est elit. Commodo adipisicing reprehenderit ad duis eiusmod in.</p>
+            <a href="index.html#nosProduit" class="hero-btn orange-btn">Explorer</a>
+        </div>
+
+        <div class="about-col">
+            <img src="src/img/aboutimage.jpg" alt="BG" class="img-about-go" data-tilt data-tilt-scale="0.9" data-tilt-glare data-tilt-max-glare="0.5">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img src="src/img/logo.svg" class="logo">
+                <p>Voluptate irure in dolore proident id laboris nostrud consequat dolore nostrud irure nulla aliqua labore.</p>
+            </div>
+            <div class="col-footer">
+                <h3>Information <div class="underline"><span></span></div>   </h3>
+                <p><a href="contact.html#location">47 Bd Lalla Yacout 5ieme Etage-Casablanca</a></p>
+                <p class="email-id">mettadouly@gmail.com</p>
+                <p>+212 66 099 305</p>
+            </div>
+            <div class="col-footer">
+                <h3>Liens <div class="underline"><span></span></div>   </h3>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">À propos</a></li>
+                    <li><a href="">Nos Produit</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+
+                                <!-- <p>Video utiliser : <a href="https://www.youtube.com/watch?v=oYRda7UtuhA"><i class="fa-brands fa-youtube"></i></a></p> -->
+            </div>
+            <div class="col-footer">
+                <h3>Contact <div class="underline"><span></span></div>   </h3>
+                <form>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Votre e-mail addresse" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><em>Adam Ettadouly</em> © 2022 - All Rifhts Reserved</p>
+    </footer> 
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    </script>
+
+    <script src="src/js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".img-about-go"), {
+		max: 15,
+		speed: 400,
+        reverse: false,
+        transition: true
+	});
+
+    VanillaTilt.init(document.querySelector(".hero-btn"), {
+		max: 10,
+		speed: 400,
+        reverse: false,
+        transition: true
+	});
+    </script>
+</body>
+</html>

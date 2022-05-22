@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="icon" href="src/img/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/186787dbac.js" crossorigin="anonymous"></script>
+
+    <title>CarboCompany</title>
+
+</head>
+<body>
+    <div id="preloader"></div>
+
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="src/img/logo.svg" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="index.html#nosProduit">Nos Produit</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <H1>Contact</H1>
+    </section>
+
+    <!-- Contact -->
+
+    <div class="location" id="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5729121411664!2d-7.614614419995232!3d33.59043658082854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d29de133fe75%3A0xf22459da92c5f827!2s5ieme%20Etage%2C%2047%20Av.%20Lalla%20Yacout%2C%20Casablanca%2020250!5e0!3m2!1sfr!2sma!4v1653173992458!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <span>
+                    <h5><i class="fa-solid fa-home"></i> XYZ Road, ABC Building</h5>
+                    <p>47 Bd Lalla Yacout 5ieme Etage-Casablanca</p>
+                </span>
+            </div>
+            <div class="contact-col">
+                <span>
+                <span>
+                    <h5><i class="fa-solid fa-phone"></i> +212 66 099 305</h5>
+                    <p>De <em>Lundi</em><i class="fa-solid fa-arrow-right"></i><em>Samedi</em></p>
+                </span>
+            </div>
+            <div class="contact-col">
+                <span>
+                <span>
+                    <h5><i class="fa-solid fa-envelope-open"></i> carbo@company.ma</h5>
+                    <p>Envoyez-nous votre demande par e-mail</p>
+                </span>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img src="src/img/logo.svg" class="logo">
+                <p>Voluptate irure in dolore proident id laboris nostrud consequat dolore nostrud irure nulla aliqua labore.</p>
+            </div>
+            <div class="col-footer">
+                <h3>Information <div class="underline"><span></span></div>   </h3>
+                <p>47 Bd Lalla Yacout 5ieme Etage-Casablanca</p>
+                <p class="email-id">mettadouly@gmail.com</p>
+                <p>+212 66 099 305</p>
+            </div>
+            <div class="col-footer">
+                <h3>Liens <div class="underline"><span></span></div>   </h3>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">À propos</a></li>
+                    <li><a href="">Nos Produit</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+
+                                <!-- <p>Video utiliser : <a href="https://www.youtube.com/watch?v=oYRda7UtuhA"><i class="fa-brands fa-youtube"></i></a></p> -->
+            </div>
+            <div class="col-footer">
+                <h3>Contact <div class="underline"><span></span></div>   </h3>
+                <form>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Votre e-mail addresse" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><em>Adam Ettadouly</em> © 2022 - All Rifhts Reserved</p>
+    </footer> 
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    </script>
+
+    <script src="src/js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".img-about-go"), {
+		max: 15,
+		speed: 400,
+        reverse: false,
+        transition: true
+	});
+
+    VanillaTilt.init(document.querySelector(".hero-btn"), {
+		max: 10,
+		speed: 400,
+        reverse: false,
+        transition: true
+	});
+    </script>
+</body>
+</html>
